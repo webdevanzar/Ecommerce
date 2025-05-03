@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "lib": ["ES2020", "DOM"],  // Added "DOM" if working with browser APIs
+    "types": ["node", "express"],
+    "baseUrl": "./",  // Helps with path resolution
+    "paths": {  // Optional: Useful for custom path aliases
+      "@/*": ["src/*"]
+    },
+    "emitDecoratorMetadata": true,  // Needed if using decorators (e.g., TypeORM, NestJS)
+    "experimentalDecorators": true  // Needed if using decorators
+  },
+  "include": ["src/**/*.ts", "types/**/*.d.ts", "tests/**/*.ts"],  // Added tests folder if applicable
+  "exclude": ["node_modules", "dist"]
+}
